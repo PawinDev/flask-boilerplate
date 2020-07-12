@@ -7,7 +7,25 @@ CORS(app)
 
 @app.route('/')
 def root():
-    return "Working"
+    return "เปิดได้แล้ววว YeHaa ไปหน้า <a href='/home'>home</a>"
 
+@app.route('/home')
+def home():
+    username = request.args.get('name')
+    print(username,'<-----------')
+    return username + " มาหน้า home แล้ว ไปหน้า  <a href='/'>แรก</a>"
+
+@app.route('/sum')
+def mySum():
+    a = request.args.get('a')
+    b = request.args.get('b')
+    a = int(a)
+    b = int(b)
+    return  str(a+b)
+
+@app.route('/mypage')
+def mypage():
+    name = request.args.get('name')
+    return render_template('home.html',name=name)
 if __name__ == "__main__":
     app.run(debug = True, host="0.0.0.0", port=5000)
