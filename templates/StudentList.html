@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <style>
+        *{
+            font-size:18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <table class="table table-bordered ">
+        <thead>
+            <tr class="bg-primary text-center">
+                <th>#</th>
+                <th>firstname</th>
+                <th>lastname</th>
+                <th>age</th>
+                <th>gpa</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in studentList %}
+            <tr class="text-center">
+                <td class="bg-warning">{{student[0]}}</td>
+                <td class="bg-light">{{student[1]}}</td>
+                <td class="bg-danger">{{student[2]}}</td>
+                <td class="bg-success   ">{{student[3]}}</td>
+                <td class="bg-primary   ">{{student[4]}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    </div>
+</body>
+</html>
