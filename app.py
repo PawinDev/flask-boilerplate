@@ -13,7 +13,7 @@ def root():
 def home():
     username = request.args.get('name')
     print(username,'<-----------')
-    return username + " มาหน้า home แล้ว ไปหน้า  <a href='/'>แรก</a>"
+    return username + " มาหน้า home แล้ว ไปหน้า  commit อิกรอบละกันน<a href='/'>แรก</a>"
 
 @app.route('/sum')
 def mySum():
