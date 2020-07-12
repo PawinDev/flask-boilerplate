@@ -7,7 +7,7 @@ CORS(app)
 
 @app.route('/')
 def root():
-    return "เปิดได้แล้ววว YeHaa ไปหน้า <a href='/home'>home</a>"
+    return "เปิดได้แล้ววว YeHaa ไปหน้า <a href='/home?name=safe'>home</a>"
 
 @app.route('/home')
 def home():
